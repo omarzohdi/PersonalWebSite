@@ -47,10 +47,21 @@ body {
   width: 32px;
   height: 32px;
   float: right;
+
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+}
+
+.Social img:hover {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+
 }
 
 
-.pomegranate-flat-button {
+.Resume-button {
   position: relative;
   vertical-align: top;
   width: 250px;
@@ -67,7 +78,7 @@ body {
   -webkit-box-shadow: inset 0 -2px #b53224;
   box-shadow: inset 0 -2px #b53224;
 }
-.pomegranate-flat-button:active {
+.Resume-button:active {
   top: 1px;
   outline: none;
   -webkit-box-shadow: none;
