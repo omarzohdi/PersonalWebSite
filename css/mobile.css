@@ -1,14 +1,14 @@
 body {
-  background: url(media/simple_dashed.png);
+  background: url(images/simple_dashed.png);
 }
 
 .CoverImage {
-  width: 32%;
+  width: 100%;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
 
-  background: url(media/me.jpg) no-repeat;
+  background: url(images/me.jpg) no-repeat;
   background-size: contain;
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 .TitleName {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   color:white;
   font-family: Georgia;
@@ -34,7 +34,7 @@ body {
 }
 
 .Description {
-  width: 32%;
+  width: 100%;
   margin: 0 auto;
   text-align: justify;
   color:white;
@@ -42,7 +42,7 @@ body {
 }
 
 .Social{
-  width: 32%;
+  width: 100%;
   height: 34px;
   margin: 0 auto;
 }
@@ -63,7 +63,6 @@ body {
   transform: rotateY(360deg);
 
 }
-
 
 .Resume-button {
   float: left;
