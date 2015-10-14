@@ -8,6 +8,10 @@ body {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
 
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  -moz-transition: -moz-transform 2s ease-in-out;
+  transition: transform 2s ease-out;
+
   background: url(images/me.jpg) no-repeat;
   background-size: contain;
   margin: 0 auto;
@@ -21,12 +25,88 @@ body {
 	filter: alpha(opacity=0);
 }
 
+.translatecoverimage{
+  -webkit-transform:translate(0px,20px);
+  -moz-transform: translate(0px,20px);
+  transform: translate(0px,20px);
+  
+  margin-top: -10px;
+  z-index: -1;
+}
+
+.Navbar
+{
+  height: 50px;
+  width: 100%;
+  min-width: 200px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+}
+.Navbar img
+{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 0;
+}
+
+.Navbar img:hover
+{
+  cursor: pointer; 
+  cursor: hand;
+}
+
+/* make these two into classes. instead of using nth of type.*/
+.Navbar img:nth-of-type(1) 
+{
+    left: 0;
+}
+.Navbar img:nth-of-type(2) 
+{
+    right: 0;
+}
+
+.Navbarbtm
+{
+  display: none;
+  height: 36px;
+  width: 100%;
+  min-width: 200px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+}
+.Navbarbtm img
+{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+}
+
+.Navbarbtm img:hover
+{
+  cursor: pointer; 
+  cursor: hand;
+}
+
+/* make these two into classes. instead of using nth of type.*/
+.Navbarbtm img:nth-of-type(1) 
+{
+    left: 0;
+}
+.Navbarbtm img:nth-of-type(2) 
+{
+    right: 0;
+}
+
 .TitleName {
   width: 100%;
   margin: 0 auto;
   color:white;
   font-family: Georgia;
-  font-size: 60px;
+  font-size: 45px;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -63,6 +143,55 @@ body {
   transform: rotateY(360deg);
 
 }
+
+.Projects
+{
+  display:none;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+  color:white;
+  font-family:  "slabo", Times, serif;
+}
+
+.Projects .item 
+{
+  margin-top: 15px;
+}
+
+.Projects .item img
+{
+  display:block;
+  margin:auto;
+  width: 100%;
+}
+
+.Projects .item .footer
+{
+  width: 24px;
+  margin: 0 auto;
+}
+.Projects .item .footer img
+{
+  width: 24px;
+
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+}
+
+ .Projects .item .footer img:hover {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.Projects .item p
+{
+  word-wrap: break-word;
+  -webkit-margin-after: 0.5em;
+}
+
 
 .Resume-button {
   float: left;
