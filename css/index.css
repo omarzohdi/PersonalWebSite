@@ -9,7 +9,7 @@ body {
   -moz-border-radius: 50%;
   min-width: 100px;
   
-  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
 
   background: url(images/me.jpg) no-repeat;
   background-size: contain;
@@ -23,6 +23,7 @@ body {
   opacity: 0;
   filter: alpha(opacity=0);
 }
+
 
 .translatecoverimage{
 
@@ -42,6 +43,7 @@ body {
   position: relative;
   margin: 0 auto;
   z-index: 0;
+
 }
 .Navbar img
 {
@@ -83,10 +85,6 @@ body {
   height: 24px;
   position: absolute;
   bottom: 0;
-}
-
-.Navbarbtm img:hover
-{
   cursor: pointer; 
   cursor: hand;
 }
@@ -110,6 +108,139 @@ body {
   font-size: 60px;
   text-align: center;
 }
+
+.Links
+{
+  width: 32%;
+  min-width: 200px;
+  margin: 0 auto;
+  text-align: justify;
+  color:white;
+  font-family:  "slabo", Times, serif;
+  display: none;
+}
+
+.Links  p
+{
+  word-wrap: break-word;
+}
+
+.Links .perSocial
+{
+  margin-top: 20px;
+}
+.Links a
+{
+  color:white;
+  font-family:  "slabo", Times, serif;
+  text-decoration: none;
+}
+.Links .perSocial img
+{
+  width: 64px;
+  height: 64px;
+  position: relative;
+  bottom: 0;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.twitter
+{
+    left: 0;
+}
+.instagram
+{
+    left: 50%;
+    margin-left: -96px;
+}
+.youtube
+{
+    left: 100%;
+    margin-left: -96px;
+}
+
+.useLinks
+{
+  position: relative;
+  width: 100%;
+}
+
+.useLinks .item
+{
+  position: relative;
+}
+.useLinks .item p
+{
+  float:left;
+  width: 80%;
+  height: 24px;
+  padding-top: 5px;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.useLinks .item img
+{
+    float: right;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/*
+.Links .perSocial img
+{
+  width: 64px;
+  margin-bottom: 10px;
+  position: relative;
+  left:0;
+  margin-left: 0px;
+  cursor: pointer; 
+  cursor: hand;
+  
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+
+ .socialIcon h3
+ {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opactiy 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+ }
+ 
+ 
+.socialIcon
+{
+  width: 100%;
+}
+.socialIcon h3
+{
+  -webkit-margin-before: -3em;
+ opacity: 0;
+}
+.socialIcon:hover img
+{
+   left: 100%;
+   margin-left: -64px;
+}
+.socialIcon:hover h3
+{
+  filter: alpha(opacity=50);
+  opacity: 1;
+}
+
+*/
+
 
 .Description {
   width: 32%;

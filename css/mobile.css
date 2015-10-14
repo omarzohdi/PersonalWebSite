@@ -25,6 +25,7 @@ body {
 	filter: alpha(opacity=0);
 }
 
+
 .translatecoverimage{
   -webkit-transform:translate(0px,20px);
   -moz-transform: translate(0px,20px);
@@ -112,6 +113,87 @@ body {
   margin-bottom: 30px;
 
 }
+
+
+.Links
+{
+  width: 100%;
+  min-width: 200px;
+  margin: 0 auto;
+  text-align: justify;
+  color:white;
+  font-family:  "slabo", Times, serif;
+  display: none;
+}
+
+.Links  p
+{
+  word-wrap: break-word;
+}
+
+.Links .perSocial
+{
+  margin-top: 20px;
+}
+.Links a
+{
+  color:white;
+  font-family:  "slabo", Times, serif;
+  text-decoration: none;
+}
+.Links .perSocial img
+{
+  width: 64px;
+  height: 64px;
+  position: relative;
+  bottom: 0;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.twitter
+{
+    left: 0;
+}
+.instagram
+{
+    left: 50%;
+    margin-left: -96px;
+}
+.youtube
+{
+    left: 100%;
+    margin-left: -96px;
+}
+
+.useLinks
+{
+  position: relative;
+  width: 100%;
+}
+
+.useLinks .item
+{
+  position: relative;
+}
+.useLinks .item p
+{
+  float:left;
+  width: 80%;
+  height: 24px;
+  padding-top: 5px;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.useLinks .item img
+{
+    float: right;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
 
 .Description {
   width: 100%;

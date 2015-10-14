@@ -7,11 +7,13 @@ $(document).ready(function()
     $(".Navbarbtm").css("display","none");
 
 	$("#id_projects").on("click", OpenProjectsPage);
-	$("#id_awards").on("click", OpenAwardPage);
+	$("#id_links").on("click", OpenlinksPage);
 	$("#id_back").on("click", OpenHomePage);
 	$('#id_top').on("click", BacktoTop);
 
 	var ishome = true;
+	var islink = false;
+	var isproject = false;
 	var cimgw;
 	
 	function ClickAnimationCheck(isAnimating)
@@ -21,17 +23,17 @@ $(document).ready(function()
 			$("#id_projects").off("click", OpenProjectsPage);
 			$("#id_back").off("click", OpenHomePage);
 			$('#id_top').off("click", BacktoTop);
-			$("#id_awards").off("click", OpenAwardPage);
+			$("#id_links").off("click", OpenlinksPage);
 		}
 		else
 		{
 			$("#id_projects").on("click", OpenProjectsPage);
 			$("#id_back").on("click", OpenHomePage);			
 			$('#id_top').on("click", BacktoTop);
-			$("#id_awards").on("click", OpenAwardPage);
+			$("#id_links").on("click", OpenlinksPage);
 		}
 	}
-	
+
 	function BacktoTop()
 	{
 		$('body').animate({
@@ -39,29 +41,91 @@ $(document).ready(function()
         }, 1000);
 	}
 
-	function OpenAwardPage()
+	function OpenlinksPage()
 	{
-	//	ClickAnimationCheck(true);
+		
+		if (ishome)
+		{
+			ClickAnimationCheck(true);
+			var cimg = $(".CoverImage");
+			cimgw = $(".CoverImage").width();
+
+			cimg.animate({ width: '100px', marginTop: '-40px'}, 1000);
+			cimg.addClass("translatecoverimage");	
+
+			$(".Social").fadeToggle(1000, function(){
+				$(".Navbarbtm").fadeToggle(1000);	
+			});
+
+			$(".Description").fadeToggle(1000, function() {
+				$(".Links").fadeToggle(1000);
+				ClickAnimationCheck(false);
+			});
+
+			ishome = false;
+			islink = true;
+		}
+		else if (isproject)
+		{
+			ClickAnimationCheck(true);
+			
+			$(".Projects").fadeToggle(1000, function() {
+				$(".Links").fadeToggle(1000);
+				ClickAnimationCheck(false);
+			});
+
+			ishome = false;
+			isproject = false;
+			islink = true;
+		}
+		else if (islink)
+		{
+			OpenHomePage();
+		}
 
 	}
 
 	function OpenHomePage()
 	{
-		ClickAnimationCheck(true);
-		var cimg = $(".CoverImage");
-
-		cimg.removeClass("translatecoverimage");
-		$(".Navbarbtm").fadeToggle(1000, function(){
-			$(".Social").fadeToggle(1000);	
-		});
-
-		$(".Projects").fadeToggle(1000, function(){
-			$(".Description").fadeToggle(1000);
-			cimg.animate({width: cimgw, marginTop: '0px'}, 1000 );
-			ClickAnimationCheck(false);
-		});
-
-		ishome = true;	
+		
+		if (isproject)
+		{
+			ClickAnimationCheck(true);
+			var cimg = $(".CoverImage");
+			
+			$(".Projects").fadeToggle(1000, function(){
+				$(".Description").fadeToggle(1000);
+				cimg.animate({width: cimgw, marginTop: '0px'}, 1000 );
+				ClickAnimationCheck(false);
+			});
+			
+			cimg.removeClass("translatecoverimage");
+			$(".Navbarbtm").fadeToggle(1000, function(){
+				$(".Social").fadeToggle(1000);
+			});
+	
+			ishome = true;
+			isproject = false;
+		}
+		else if (islink)
+		{
+			ClickAnimationCheck(true);
+			var cimg = $(".CoverImage");
+			
+			$(".Links").fadeToggle(1000, function(){
+				$(".Description").fadeToggle(1000);
+				cimg.animate({width: cimgw, marginTop: '0px'}, 1000 );
+				ClickAnimationCheck(false);
+			});
+			
+			cimg.removeClass("translatecoverimage");
+			$(".Navbarbtm").fadeToggle(1000, function(){
+				$(".Social").fadeToggle(1000);	
+			});
+	
+			ishome = true;
+			islink = false;	
+		}
 	}
 
 	function OpenProjectsPage ()
@@ -85,8 +149,23 @@ $(document).ready(function()
 			});
 
 			ishome = false;
+			isproject = true;
+			islink = false;
 		}
-		else
+		else if (islink)
+		{
+			ClickAnimationCheck(true);
+
+			$(".Links").fadeToggle(1000, function() {
+				$(".Projects").fadeToggle(1000);
+				ClickAnimationCheck(false);
+			});
+
+			ishome = false;
+			isproject = true;
+			islink = false;
+		}
+		else if (isproject)
 		{
 			OpenHomePage();
 		}
