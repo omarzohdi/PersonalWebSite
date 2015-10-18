@@ -22,7 +22,7 @@ h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
 .rightnav {  right:0; }
 .middlenav{  left: 50%; }
 
-.Navbar { width: 32%; min-width: 200px; position: relative; margin: 0 auto; z-index: 0;}
+.Navbar { position: relative; z-index: 0;}
 .Navbar img{ position: absolute; bottom: 0; cursor: pointer; cursor: hand;}
 
 /* DESCRIPTION */
@@ -56,3 +56,16 @@ h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
 .useLinks .linklist .item { position: relative;   height: 32px;}
 .useLinks .linklist .item p { float:left; width: 80%; padding-top: 5px; margin: 0px; margin-bottom: 5px; }
 .useLinks .linklist .item img{ float: right; vertical-align: middle; width: 24px; }
+
+/*
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////MOBILE /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen and (max-width: 699px) {
+    .CoverImage{width: 100%;}
+    .translatecoverimage { transform: translate(0px,20px); margin-top: -10px; }
+    .pagesize { width: 100%;}
+    .TitleName { width: 100%; font-size: 45px; margin-top: 30px; margin-bottom: 30px;}
+}
