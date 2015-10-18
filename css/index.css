@@ -1,345 +1,58 @@
-body {
-  background: url(images/simple_dashed.png);
-}
+/* tags */
+body { background: url(images/simple_dashed.png); }
+p { word-wrap: break-word;   text-align: justify; font-family:  "slabo", Times, serif; color:white;}
+a { color:white; font-family:  "slabo", Times, serif; text-decoration: none; }
+h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
 
-.CoverImage {
-  width: 25%;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  min-width: 100px;
+/* MAIN DIVS */
+.TitleName { width: 50%; min-width: 200px; margin: 15px auto; color:white; font-family: "slabo", Times, serif; font-size: 60px; text-align: center; }
+.pagesize { width: 32%; min-width: 200px; margin: 0 auto;}
 
-  transition: transform 2s ease-in-out;
+.CoverImage { width: 25%; min-width: 100px; border-radius: 50%; transition: transform 2s ease-in-out; background: url(images/me.jpg) no-repeat; background-size: contain; margin: 0 auto;}
+.CoverImage img { width:100%; height:100%; opacity: 0; filter: alpha(opacity=0); z-index: -1; }
+.translatecoverimage{ transform: translate(0px,50px); margin-top: -40px; }
 
-  background: url(images/me.jpg) no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-}
+.topnav { height: 50px; }
+.topnav img { width: 48px; }
 
-.CoverImage img {
-  width:100%;
-  height:100%;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
+.bottomnav {display: none; height: 36px;}
+.bottomnav img { width: 24px; height: 24px; }
 
-.translatecoverimage{
+.leftnav  {  left:0; }
+.rightnav {  right:0; }
+.middlenav{  left: 50%; }
 
-  -webkit-transform:translate(0px,50px);
-  -moz-transform: translate(0px,50px);
-  transform: translate(0px,50px);
+.Navbar { width: 32%; min-width: 200px; position: relative; margin: 0 auto; z-index: 0;}
+.Navbar img{ position: absolute; bottom: 0; cursor: pointer; cursor: hand;}
 
-   z-index: -1;
-   margin-top: -40px;
-}
+/* DESCRIPTION */
+.Description { display: block;}
 
-.Navbar
-{
-  height: 50px;
-  width: 32%;
-  min-width: 200px;
-  position: relative;
-  margin: 0 auto;
-  z-index: 0;
+.Social{ height: 34px; }
+.Social img{ width: 32px; height: 100%; float: right; transition: transform 0.4s ease-out;}
+.Social img:hover { transform: rotateY(360deg); }
 
-}
-.Navbar img
-{
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  bottom: 0;
-}
+.Resume-button:active { top: 1px; outline: none;  box-shadow: none; }
+.Resume-button { float: left; width: 50%; height: 100%; font-size: 22px; color: white; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: #c0392b;
+  border: 0; border-bottom: 2px solid #b53224; cursor: pointer; box-shadow: inset 0 -2px #b53224; }
 
-.Navbar img:hover
-{
-  cursor: pointer;
-  cursor: hand;
-}
+/* PROJECTS */
+.Projects { display:none; }
+.Projects .item { margin-top: 15px; }
+.Projects .item img{ width: 100%; }
+.Projects .item .footer { width: 24px; margin: 0 auto; }
+.Projects .item .footer img{ transition: transform 0.4s ease-out; }
+.Projects .item .footer img:hover { transform: rotateY(360deg); }
 
-/* make these two into classes. instead of using nth of type.*/
-.Navbar img:nth-of-type(1)
-{
-    left: 0;
-}
-.Navbar img:nth-of-type(2)
-{
-    right: 0;
-}
+/* LINKS */
+.Links{ display: none;}
+.Links .perSocial { margin-top: 20px; width: 100%;}
+.Links .perSocial .icons {height: 64px; margin-bottom: 32px;}
+.Links .perSocial .icons img { width: 40px; height: 40px; }
+.Links .perSocial .icons .midsize { margin-left: -16px; }
 
-.Navbarbtm
-{
-  display: none;
-  height: 36px;
-  width: 32%;
-  min-width: 200px;
-  position: relative;
-  margin: 0 auto;
-  z-index: 0;
-}
-.Navbarbtm img
-{
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  bottom: 0;
-  cursor: pointer;
-  cursor: hand;
-}
-
-/* make these two into classes. instead of using nth of type.*/
-.Navbarbtm img:nth-of-type(1)
-{
-    left: 0;
-}
-.Navbarbtm img:nth-of-type(2)
-{
-    right: 0;
-}
-
-.TitleName {
-  width: 50%;
-  min-width: 200px;
-  margin: 15px auto;
-  color:white;
-  font-family: "slabo", Times, serif;
-  font-size: 60px;
-  text-align: center;
-}
-
-.Links
-{
-  width: 32%;
-  min-width: 200px;
-  margin: 0 auto;
-  text-align: justify;
-  color:white;
-  font-family:  "slabo", Times, serif;
-  display: none;
-}
-
-.Links  p
-{
-  word-wrap: break-word;
-}
-
-.Links .perSocial
-{
-  margin-top: 20px;
-}
-.Links a
-{
-  color:white;
-  font-family:  "slabo", Times, serif;
-  text-decoration: none;
-}
-.Links .perSocial img
-{
-  width: 32px;
-  height: 32px;
-  position: relative;
-  bottom: 0;
-  cursor: pointer;
-  cursor: hand;
-}
-
-.twitter
-{
-    left: 0;
-}
-.instagram
-{
-    left: 50%;
-    margin-left: -48px;
-}
-.youtube
-{
-    left: 100%;
-    margin-left: -48px;
-}
-
-.useLinks
-{
-  position: relative;
-  width: 100%;
-}
-
-.useLinks .item
-{
-  position: relative;
-}
-.useLinks .item p
-{
-  float:left;
-  width: 80%;
-  height: 24px;
-  padding-top: 5px;
-  margin: 0px;
-  margin-bottom: 5px;
-}
-
-.useLinks .item img
-{
-    float: right;
-    vertical-align: middle;
-    width: 24px;
-    height: 24px;
-}
-/*
-.Links .perSocial img
-{
-  width: 64px;
-  margin-bottom: 10px;
-  position: relative;
-  left:0;
-  margin-left: 0px;
-  cursor: pointer;
-  cursor: hand;
-
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-
-}
-
- .socialIcon h3
- {
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opactiy 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
- }
-
-
-.socialIcon
-{
-  width: 100%;
-}
-.socialIcon h3
-{
-  -webkit-margin-before: -3em;
- opacity: 0;
-}
-.socialIcon:hover img
-{
-   left: 100%;
-   margin-left: -64px;
-}
-.socialIcon:hover h3
-{
-  filter: alpha(opacity=50);
-  opacity: 1;
-}
-
-*/
-
-.Description {
-  width: 32%;
-  min-width: 200px;
-  margin: 0 auto;
-  text-align: justify;
-  color:white;
-  font-family:  "slabo", Times, serif;
-
-}
-
-.Description  p
-{
-  word-wrap: break-word;
-}
-
-.Social{
-  width: 32%;
-  min-width: 200px;
-  height: 34px;
-  margin: 0 auto;
-}
-
-.Social img{
-  width: 32px;
-  height: 100%;
-  float: right;
-
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  -moz-transition: -moz-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-}
-
-.Social img:hover {
-  -webkit-transform: rotateY(360deg);
-  -moz-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
-
-.Projects
-{
-  display:none;
-  width: 32%;
-  margin: 0 auto;
-  text-align: justify;
-  color:white;
-  font-family:  "slabo", Times, serif;
-}
-
-.Projects .item
-{
-  margin-top: 15px;
-}
-
-.Projects .item img
-{
-  display:block;
-  margin:auto;
-  width: 100%;
-}
-
-.Projects .item .footer
-{
-  width: 24px;
-  margin: 0 auto;
-}
-.Projects .item .footer img
-{
-  width: 24px;
-
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  -moz-transition: -moz-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-}
-
- .Projects .item .footer img:hover {
-  -webkit-transform: rotateY(360deg);
-  -moz-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
-
-.Projects .item p
-{
-  word-wrap: break-word;
-  -webkit-margin-after: 0.5em;
-}
-
-.Resume-button {
-  float: left;
-  width: 50%;
-  height: 100%;
-  font-size: 22px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  background: #c0392b;
-  border: 0;
-  border-bottom: 2px solid #b53224;
-  cursor: pointer;
-  -webkit-box-shadow: inset 0 -2px #b53224;
-  box-shadow: inset 0 -2px #b53224;
-}
-.Resume-button:active {
-  top: 1px;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
+.useLinks{ position: relative; width: 100%; }
+.useLinks .linklist {margin-top: 32px; margin-bottom: 32px}
+.useLinks .linklist .item { position: relative;   height: 32px;}
+.useLinks .linklist .item p { float:left; width: 80%; padding-top: 5px; margin: 0px; margin-bottom: 5px; }
+.useLinks .linklist .item img{ float: right; vertical-align: middle; width: 24px; }

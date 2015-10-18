@@ -1,163 +1,89 @@
-
 $(document).ready(function()
 {
     $("body").css("display", "none");
     $("body").fadeIn(2000);
-    $(".Projects").css("display", "none");
-    $(".Navbarbtm").css("display","none");
 
-  	$("#id_projects").on("click", OpenProjectsPage);
-  	$("#id_links").on("click", OpenlinksPage);
-  	$("#id_back").on("click", OpenHomePage);
-  	$('#id_top').on("click", BacktoTop);
-
-  	var ishome = true;
-  	var islink = false;
-  	var isproject = false;
-
+    var currpage = ".Description";
     var cimg = $(".CoverImage");
   	var cimgw = $(".CoverImage").width();
 
-	function ClickAnimationCheck(isAnimating)
+    var PrjCallback =  function(event){ SwitchPage(".Projects") };
+    var LnkCallback =  function(event){ SwitchPage(".Links") };
+    var DesCallback = function(event){ SwitchPage(".Description") };
+
+    $("#id_projects").on("click", PrjCallback );
+  	$("#id_links").on("click", LnkCallback );
+  	$("#id_back").on("click", DesCallback );
+  	$('#id_top').on("click", BacktoTop);
+
+  function ClickAnimationCheck(isAnimating)
 	{
 		if (isAnimating)
 		{
-			$("#id_projects").off("click", OpenProjectsPage);
-			$("#id_back").off("click", OpenHomePage);
-			$('#id_top').off("click", BacktoTop);
-			$("#id_links").off("click", OpenlinksPage);
+      $("#id_projects").off("click", PrjCallback );
+    	$("#id_links").off("click", LnkCallback );
+    	$("#id_back").off("click", DesCallback );
+    	$('#id_top').off("click", BacktoTop);
 		}
 		else
 		{
-			$("#id_projects").on("click", OpenProjectsPage);
-			$("#id_back").on("click", OpenHomePage);
-			$('#id_top').on("click", BacktoTop);
-			$("#id_links").on("click", OpenlinksPage);
+      $("#id_projects").on("click", PrjCallback );
+    	$("#id_links").on("click", LnkCallback );
+    	$("#id_back").on("click", DesCallback );
+    	$('#id_top').on("click", BacktoTop);
 		}
 	}
 
-	function BacktoTop()
-	{
-		$('body').animate({
-          scrollTop: 0
-        }, 1000);
-	}
+	function BacktoTop() { $('body').animate({ scrollTop: 0 }, 1000); }
 
-  function ShrinkCoverImage()
+  function TransformCoverImage( shrink )
   {
-    cimg.animate({ width: '100px', marginTop: '-40px'}, 1000);
-    cimg.addClass("translatecoverimage");
+    if (shrink)
+    {
+        cimg.animate({ width: '100px', marginTop: '-40px'}, 1000);
+        cimg.addClass("translatecoverimage");
+    }
+    else
+      cimg.removeClass("translatecoverimage");
   }
 
-  function ToggleHomeNavigation()
+  function ToggleNavigation(from, to)
   {
-      $(".Social").fadeToggle(1000, function(){
-        $(".Navbarbtm").fadeToggle(1000);
-      });
+    $(from).fadeToggle(1000, function(){ $(to).fadeToggle(1000); });
   }
-  function ToggleProjLinkNavigation()
-  {
-    $(".Navbarbtm").fadeToggle(1000, function(){
-      $(".Social").fadeToggle(1000);
-    });
-  }
-
   function ToggleMainArea(from, to, backhome)
   {
     $(from).fadeToggle(1000, function(){
         $(to).fadeToggle(1000);
-        if (backhome)
-          { cimg.animate({width: cimgw, marginTop: '0px'}, 1000 );}
-        ClickAnimationCheck(false);
+        if (backhome){ cimg.animate({width: cimgw, marginTop: '0px'}, 1000 ); }
+          ClickAnimationCheck(false);
       });
   }
 
-	function OpenlinksPage()
-	{
-		if (ishome)
-		{
-			ClickAnimationCheck(true);
-      ShrinkCoverImage();
-      ToggleHomeNavigation();
+  function SwitchPage(nextpage)
+  {
+      ClickAnimationCheck(true);
 
-      ToggleMainArea(".Description", ".Links",false);
+      if (currpage == nextpage)
+        nextpage = ".Description";
 
-			ishome = false;
-			islink = true;
-		}
-		else if (isproject)
-		{
-			ClickAnimationCheck(true);
+      if (currpage == ".Description")
+      {
+        TransformCoverImage(true);
+        ToggleNavigation(".Social", ".bottomnav");
+      }
 
-      ToggleMainArea(".Projects", ".Links",false);
+      if (nextpage == ".Description")
+      {
+          ToggleMainArea(currpage,nextpage, true);
+          TransformCoverImage(false);
+          ToggleNavigation(".bottomnav",".Social");
+      }
+      else
+        ToggleMainArea(currpage, nextpage,false);
 
-			ishome = false;
-			isproject = false;
-			islink = true;
-		}
-		else if (islink)
-		{
-			OpenHomePage();
-		}
-
-	}
-
-	function OpenHomePage()
-	{
-
-		if (isproject)
-		{
-			ClickAnimationCheck(true);
-
-      ToggleMainArea(".Projects",".Description", true)
-
-			cimg.removeClass("translatecoverimage");
-			ToggleProjLinkNavigation();
-
-			ishome = true;
-			isproject = false;
-		}
-		else if (islink)
-		{
-			ClickAnimationCheck(true);
-
-      ToggleMainArea(".Links", ".Description",true);
-
-			cimg.removeClass("translatecoverimage");
-      ToggleProjLinkNavigation();
-
-			ishome = true;
-			islink = false;
-		}
-	}
-
-	function OpenProjectsPage ()
-	{
-		if (ishome)
-		{
-			ClickAnimationCheck(true);
-			ShrinkCoverImage();
-      ToggleHomeNavigation();
-      ToggleMainArea(".Description", ".Projects",false);
-
-			ishome = false;
-			isproject = true;
-			islink = false;
-		}
-		else if (islink)
-		{
-			ClickAnimationCheck(true);
-			ToggleMainArea(".Links", ".Projects",false);
-
-			ishome = false;
-			isproject = true;
-			islink = false;
-		}
-		else if (isproject)
-		{
-			OpenHomePage();
-		}
-	}
+      currpage = nextpage;
+  }
 });
 
 if (screen.width <= 699)
