@@ -39,12 +39,8 @@ $(document).ready(function()
   function TransformCoverImage( shrink )
   {
     if (shrink)
-    {
-        cimg.animate({ width: '100px', marginTop: '-40px'}, 1000);
-        cimg.addClass("translatecoverimage");
-    }
-    else
-      cimg.removeClass("translatecoverimage");
+      cimg.animate({ width: '100px', marginTop: '-40px'}, 1000) 
+     cimg.toggleClass("translatecoverimage");
   }
 
   function ToggleNavigation(from, to)

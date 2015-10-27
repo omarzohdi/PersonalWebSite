@@ -25,12 +25,14 @@ h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
 .Navbar { position: relative; z-index: 0;}
 .Navbar img{ position: absolute; bottom: 0; cursor: pointer; cursor: hand;}
 
+.animateonhover {transition: transform 0.4s ease-out;}
+.animateonhover:hover { transform: rotateY(360deg); }
+
 /* DESCRIPTION */
 .Description { display: block;}
 
 .Social{ height: 34px; }
-.Social img{ width: 32px; height: 100%; float: right; transition: transform 0.4s ease-out;}
-.Social img:hover { transform: rotateY(360deg); }
+.Social img{ width: 32px; height: 100%; float: right;}
 
 .Resume-button:active { top: 1px; outline: none;  box-shadow: none; }
 .Resume-button { float: left; width: 50%; height: 100%; font-size: 22px; color: white; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: #c0392b;
@@ -41,8 +43,6 @@ h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
 .Projects .item { margin-top: 15px; }
 .Projects .item img{ width: 100%; }
 .Projects .item .footer { width: 24px; margin: 0 auto; }
-.Projects .item .footer img{ transition: transform 0.4s ease-out; }
-.Projects .item .footer img:hover { transform: rotateY(360deg); }
 
 /* LINKS */
 .Links{ display: none;}
