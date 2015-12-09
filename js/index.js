@@ -16,6 +16,12 @@ $(document).ready(function()
   	$("#id_back").on("click", DesCallback );
   	$('#id_top').on("click", BacktoTop);
 
+    $(window).resize(function() {
+
+      console.log("Resized CoverImage width:" + cimgw );
+
+    });
+
   function ClickAnimationCheck(isAnimating)
 	{
 		if (isAnimating)
@@ -39,7 +45,7 @@ $(document).ready(function()
   function TransformCoverImage( shrink )
   {
     if (shrink)
-      cimg.animate({ width: '100px', marginTop: '-40px'}, 1000) 
+      cimg.animate({ width: '100px', marginTop: '-40px'}, 1000)
      cimg.toggleClass("translatecoverimage");
   }
 
