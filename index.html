@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Omar Zohdi</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Web Site for Omar Zohdi. Game Developer and Technology enthusiast.">
@@ -16,27 +17,162 @@
   </head>
 
   <body>
-
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////// TITLE /////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
     <div class= "TitleName">Omar A. Zohdi</div>
-    <div class = "CoverImage" ><img src="css/images/me.jpg" alt="" /> </div>
 
-    <div class = "Description"> <p>
-      Hello! My name is Omar, I'm a geek, a technologist and a game programmer.
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////// HOME //////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
 
-      I recently completed my MSc in computer game development at DePaul University.
-      My work focuses on delivering new and innovative experiences that players can enjoy.
-      I mainly work on the challenging aspects of game engines and building tools for game-play programmers.
-      I'm also quite interested in emerging technologies like VR & AR.
-      I'm a big fan of story driven games that show the human and emotional side of stories through interactive storytelling.
-    </p></div>
+    <div id= "id_home" class= "CoverImage"><img src="css/images/me.jpg" alt="Omar A Zohdi" /> </div>
+    <div class= "topnav Navbar pagesize">
+      <img class="leftnav" id= "id_projects" title="Projects" src="images/projects.png" alt="Projects"/>
+      <img class="rightnav" id= "id_links" title="Links" src="images/link.png" alt="Links"/>
+    </div>
 
-    <div class = "Social">
+    <div class = "Description pagesize">
+      <p>
+        Hello! My name is Omar, I'm a geek, a technologist and a game programmer.
 
-      <a href="http://www.github.com/omarzohdi/" target="_blank"> <img  src="images/github.png" alt="Github" /> </a>
-      <a href="http://www.linkedin.com/in/omarzohdi/" target="_blank"> <img src="images/linkedin.png" alt="Linkedin" /> </a>
-      <a href="mailto:omarzohdi@gmail.com" target="_blank"> <img src="images/email.png" alt="e-mail" /> </a>
+        I recently completed my MSc in computer game development at DePaul University.
+        My work focuses on delivering new and innovative experiences that players can enjoy.
+        I mainly work on the challenging aspects of game engines; building the underlying systems and tools for game-play programmers.
+        I'm also quite interested in emerging technologies like VR & AR.
+        I'm a big fan of story driven games that show the human and emotional side of stories through interactive storytelling.
+      </p>
+    </div>
+
+    <div class = "Social pagesize">
+
+      <a href="http://www.github.com/omarzohdi/" target="_blank"> <img  class="animateonhover" src="images/github.png" alt="Github" /> </a>
+      <a href="http://www.linkedin.com/in/omarzohdi/" target="_blank"> <img class="animateonhover" src="images/linkedin.png" alt="Linkedin" /> </a>
+      <a href="mailto:omarzohdi@gmail.com" target="_blank"> <img class="animateonhover" src="images/email.png" alt="e-mail" /> </a>
 
       <input type="button" value="Resume" onclick="window.open('documents/OmarAZohdiResume.pdf');" class="Resume-button">
+    </div>
+
+     <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////// PROJECTS /////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <div class = "Projects pagesize" >
+
+        <div class = "item">
+          <img src="images/soteriabnr.png" alt="Soteria"/>
+            <p>
+                Soteria is a 2D, single player, steam punk adventure game, in which the player as Ana Carmena reclaims her dreams from the evil Shadow Toad by facing her fears. The game is informed by psychology research and aims to promote mental and emotional readiness for the use of effective strategies to overcome general anxiety disorder.
+            </p>
+
+            <div class="footer">
+              <a href="http://playforchange.cdm.depaul.edu/projects/soteria/" target="_blank">
+                <img class="animateonhover" src="images/url.png" alt="url" />
+              </a>
+            </div>
+            <hr/>
+        </div>
+
+        <div class = "item">
+
+          <img src="images/perfectionbnr.png" alt="Perfection"/>
+          <p>
+              This is a game about the eating disorder anorexia nervosa, a phenomenon that is often highly incomprehensible
+              to people without first hand experience and freight with misconceptions.
+          </p>
+          <div class="footer">
+            <a href="http://fortherecords.org/games/perfection" target="_blank">
+              <img class="animateonhover" src="images/url.png" alt="url" />
+            </a>
+          </div>
+          <hr/>
+        </div>
+
+      </div>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////// LINKS /////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <div class = "Links pagesize">
+        <div class = "perSocial Navbar pagesize">
+          <hr/>
+          <h2> Social Networks</h2>
+          <!--<hr/> -->
+          <div class= "icons">
+
+            <a href="http://www.twitter.com/razlken" target="_blank">
+              <img class="leftnav" title="Twitter" src="images/twitter.png" alt="Twitter">
+            </a>
+
+            <a href="http://www.instagram.com/razlken" target="_blank">
+              <img class="middlenav midsize" title="Instagram" src="images/instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCbH-KaxN81UiWPJVAGHN2Jw" target="_blank">
+              <img class="rightnav" title="Youtube" src="images/youtube.png" alt="Youtube">
+            </a>
+
+          </div>
+        </div>
+
+        <div class = "useLinks">
+          <hr/>
+            <h2> Useful Links</h2>
+          <!--<hr/> -->
+
+          <div class= "linklist">
+
+          <div class = "item">
+            <p> Coding Math </p>
+            <a href="https://www.youtube.com/user/codingmath/videos?sort=da&view=0&flow=list" target="_blank">
+                <img  class="animateonhover" src="images/url.png" alt="url" />
+              </a>
+          </div>
+          <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          <div class = "item">
+            <p> Game Programming Patterns </p>
+            <a href="http://gameprogrammingpatterns.com/" target="_blank">
+                <img  class="animateonhover" src="images/url.png" alt="url" />
+              </a>
+          </div>
+          <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          <div class = "item">
+            <p> Handmade Hero </p>
+            <a href="https://handmadehero.org/" target="_blank">
+                <img  class="animateonhover" src="images/url.png" alt="url" />
+              </a>
+          </div>
+          <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          <div class = "item">
+            <p> Game dev. Journals </p>
+            <a href="https://games.commons.gc.cuny.edu/games-scholarship/journals/" target="_blank">
+                <img  class="animateonhover" src="images/url.png" alt="url" />
+              </a>
+          </div>
+          <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          </div>
+
+          <div style="clear: both;"></div>
+        </div>
+        <hr/>
+    </div>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////// NAVIGATION /////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <div class = "bottomnav Navbar pagesize">
+        <img  class="leftnav" id = "id_back" title="Back" src="images/back.png" alt="Back"/>
+        <img  class="rightnav" id = "id_top" title= "Top" src="images/top.png" alt="Top"/>
     </div>
 
   </body>
