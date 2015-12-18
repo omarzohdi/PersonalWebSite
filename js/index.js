@@ -16,17 +16,15 @@ $(document).ready(function()
   	$("#id_back").on("click", DesCallback );
   	$('#id_top').on("click", BacktoTop);
 
-    $(window).resize(function() {
-
+  $(window).resize(function()
+  {
       //Update Original Width of CoverImage based on size of page//
       var sitew = cimg.parent().width();
       cimgw = (25 * sitew) / 100;
 
       if (currpage == ".Description")
         cimg.animate({width: cimgw}, 1000 );
-
-      console.log("Resized CoverImage width:" + cimgw );
-    });
+  });
 
   function ClickAnimationCheck(isAnimating)
 	{
