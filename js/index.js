@@ -7,9 +7,9 @@ $(document).ready(function()
     var cimg = $(".CoverImage");
   	var cimgw = $(".CoverImage").width();
 
-    var screenheight = $(window).width();
+    var screenwidth = $(window).width();
+    var orientation = window.orientation;
 
-    var cimgwstart;
     var PrjCallback =  function(event){ SwitchPage(".Projects") };
     var LnkCallback =  function(event){ SwitchPage(".Links") };
     var DesCallback = function(event){ SwitchPage(".Description") };
@@ -19,9 +19,9 @@ $(document).ready(function()
   	$("#id_back").on("click", DesCallback );
   	$('#id_top').on("click", BacktoTop);
 
-  $(window).resize(function()
+  $(window).resize(function(event)
   {
-      if($(window).width() != screenheight)
+      if($(window).width() != screenwidth && orientation == window.orientation)
       {
         //Update Original Width of CoverImage based on size of page//
         var sitew = cimg.parent().width();
