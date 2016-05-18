@@ -7,6 +7,9 @@ $(document).ready(function()
     var cimg = $(".CoverImage");
   	var cimgw = $(".CoverImage").width();
 
+    var screenheight = $(window).width();
+
+    var cimgwstart;
     var PrjCallback =  function(event){ SwitchPage(".Projects") };
     var LnkCallback =  function(event){ SwitchPage(".Links") };
     var DesCallback = function(event){ SwitchPage(".Description") };
@@ -18,12 +21,15 @@ $(document).ready(function()
 
   $(window).resize(function()
   {
-      //Update Original Width of CoverImage based on size of page//
-      var sitew = cimg.parent().width();
-      cimgw = (25 * sitew) / 100;
+      if($(window).width() != screenheight)
+      {
+        //Update Original Width of CoverImage based on size of page//
+        var sitew = cimg.parent().width();
+        cimgw = (25 * sitew) / 100;
 
-      if (currpage == ".Description")
-        cimg.animate({width: cimgw}, 1000 );
+        if (currpage == ".Description")
+          cimg.animate({width: cimgw}, 1000 );
+      }
   });
 
   function ClickAnimationCheck(isAnimating)
