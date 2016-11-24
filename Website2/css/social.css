@@ -1,15 +1,9 @@
-#instafeed
-{
-	height: 100%;
+#instafeed{ height: 100%; overflow: hidden;}
+.centermargin { margin-left: -50%; }
+.section {  }
+.insta { height: 300px; }
+#youtubecontainer { overflow: hidden; }
 
-	overflow: hidden;
-}
-
-.insta
-{
-	margin-left: -50%;
-	
-}
 
 .sociallink	 {
 	text-align: center;
@@ -20,8 +14,6 @@
     height: 100%;
     display: block;
 }
-
-.section {  }
 
 .sociallinkicon { 
 	margin-top: 50%;

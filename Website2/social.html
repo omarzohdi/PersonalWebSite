@@ -11,25 +11,15 @@
 
 	 <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
-
-	<script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'user',
-        limit: 1,
-        userId: '35724427',
-        resolution: 'low_resolution',
-        accessToken: '35724427.1677ed0.fd0e5ae2469741a3b99f1d898a459913',
-        template: '<a href="{{link}}"><img class="insta" src="{{image}}" /></a>'
-    });
-    feed.run();
-</script>
-
   </head>
 
   <body>
-  
+
+
+<div style="position: fixed;  width: 150px; height: 150px">
+
+</div>
+
 	 <div class="container">
 	 	<div class="row">
 	  		<div class="col-md-3 "></div>
@@ -42,6 +32,14 @@
 				</div>
 		  	
 	  			<div class="col-xs-4 dashborder section">
+	  				<div id="youtubecontainer"> 
+	  					<iframe class="centermargin" id= "youtube" width="533" height="300" src="" frameborder="0" ></iframe> 
+	  				</div>
+	  				<div class="sociallink"> 
+						<a href="https://www.youtube.com/channel/UCbH-KaxN81UiWPJVAGHN2Jw" target="_blank"> 
+			  				<img  class="sociallinkicon" src="images/youtube.png" alt="youtube" />
+			  		</a>
+	  				</div>
 	  			</div>
 	  			
 	  			<div class="col-xs-4 dashborder section">
@@ -51,7 +49,7 @@
 	  				<div id="instafeed"></div>
 	  				<div class="sociallink"> 
 						<a href="http://www.instagram.com/razlken/" target="_blank"> 
-			  				<img  class="sociallinkicon" src="images/instagram.png" alt="Github" />
+			  				<img  class="sociallinkicon" src="images/instagram.png" alt="instagram" />
 			  			</a>
 	  				</div>
 	  			</div>
@@ -97,4 +95,9 @@
 
 	 </div>
   </body>
+
+  	<script type="text/javascript" src="js/instafeed.min.js"></script>
+	<script type="text/javascript" src="js/social.js"></script>
+
+
 </html>
