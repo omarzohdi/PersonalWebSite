@@ -14,9 +14,7 @@
       {
         callback(xobj.responseText);
       }
-      
     };
-    console.log(xobj);
     xobj.send(null);  
  }
 
@@ -55,13 +53,42 @@ function onYouTubeIframeAPIReady()
 	});
 }
 
-// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event)
 {
 	event.target.playVideo();
 	player.mute();
 }
+//////////////////////////////////////////////////////////////////////////
+/////////////// twitterFetcher.js - get last tweet.///////////////////////
+//////////////////////////////////////////////////////////////////////////
 
+var configProfile = {
+  "profile": {"screenName": 'razlken'},
+  "domId": '',
+  "maxTweets": 1,
+  "showImages": true,
+  "dataOnly": true,
+  "customCallback": handleTweets,
+  "showRetweet": false,
+  "lang": 'en'
+};
+
+function handleTweets(tweets)
+{
+	console.log(tweets[0]);
+	var tweetText = document.getElementById('twittertextfetch');
+	var tweetImage = document.getElementById('twitterimagefetch');
+
+    var htmltweet = tweets[0].tweet;
+  	tweetText.innerHTML = htmltweet;
+
+	if (tweets[0].image)
+  		tweetImage.setAttribute("src",  tweets[0].image);
+  	else
+  		tweetImage.setAttribute("src",  "https://avatars.io/twitter/razlken");
+}
+
+twitterFetcher.fetch(configProfile);
 //////////////////////////////////////////////////////////////////////////
 /////////////// instafee.js - Load instagram feed.////////////////////////
 //////////////////////////////////////////////////////////////////////////
