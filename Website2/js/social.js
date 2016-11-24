@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////////////////////////
  function loadJSON(callback) 
  {   
- 	console.log("loadJSON");
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
 
@@ -15,8 +14,7 @@
       {
         callback(xobj.responseText);
       }
-
-
+      
     };
     console.log(xobj);
     xobj.send(null);  
