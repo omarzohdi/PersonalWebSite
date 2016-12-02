@@ -2,7 +2,7 @@
 html, body {  height: 100%; min-height: 100% !important; }
 body { background: url("../css/images/grey.png") ; }
 
-p { font-size: 12px;  text-align: justify; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);}
+p { font-size: 14px;  text-align: justify; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);}
 
 .Resume-button:active { top: 1px; outline: none;  box-shadow: none; }
 .Resume-button { float: left; width: 50%; height: 100%; font-size: 22px; color: white; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: #c0392b;
@@ -14,7 +14,7 @@ p { font-size: 12px;  text-align: justify; text-shadow: 0 1px 2px rgba(0, 0, 0, 
 	text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: rgba(0,0,0,0);
   border: 0; border: 2px solid black; cursor: pointer; w}
 
-.coverimage{ margin-bottom: 10px; box-shadow: 0 2px 10px 2px rgba(0,0,0,.3); }
+.coverimage{ box-shadow: 0 2px 10px 2px rgba(0,0,0,.3); }
 .socialicon{ width: 32px; height: 100%; float: right;}
 
 .title { font-size: 30px;  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.25);}
@@ -25,11 +25,13 @@ p { font-size: 12px;  text-align: justify; text-shadow: 0 1px 2px rgba(0, 0, 0, 
 .secondcard {margin-top: 25px; }
 .thumbnail { box-shadow: 0 2px 10px 2px rgba(0,0,0,.3); }
 
+.important { color: #b53224; }
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	.container {margin-top: 5% !important; margin-bottom: 5% !important;}
 	.dashborder { border-right: 2px dashed #EEEEEE; }
-	.card {box-shadow: 0 2px 10px 2px rgba(0,0,0,.3); }
+	.card {box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
 	.nav-button { font-size: 22px;}
 	.secondcard {margin-top: 50px; }
 }
