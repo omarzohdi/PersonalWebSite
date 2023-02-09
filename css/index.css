@@ -1,61 +1,23 @@
 /* tags */
-body { background: url(images/simple_dashed.png); }
-p { word-wrap: break-word;   text-align: justify; font-family:  "slabo", Times, serif; color:white;}
-a { color:white; font-family:  "slabo", Times, serif; text-decoration: none; }
-h2 {color:white;font-family:  "slabo", Times, serif; text-align: center;}
+body { background: url(images/simple_dashed.png); font: 1.3rem Inconsolata, monospace; text-shadow: 0 0 4px green; }
+
+.description {padding-left: 2%;}
+.works {padding-left: 2%;}
+
+marquee {color: green}
+p { word-wrap: break-word; color:green;}
+a { color:green; text-decoration: none; }
+h1 { color:green;}
+h2 { color:green;}
+h3 { color:green;}
+
+ul {   list-style: none; }
+li:before { content: '> '; color: green;}
 
 /* MAIN DIVS */
-.TitleName { width: 50%; min-width: 200px; margin: 15px auto; color:white; font-family: "slabo", Times, serif; font-size: 60px; text-align: center; }
+.content {max-width: 900px; padding: 10px; margin: auto; }
+
 .pagesize { width: 32%; min-width: 200px; margin: 0 auto;}
-
-.CoverImage { width: 25%; min-width: 100px; border-radius: 50%; transition: transform 2s ease-in-out; background: url(images/me.jpg) no-repeat; background-size: contain; margin: 0 auto;}
-.CoverImage img { width:100%; height:100%; opacity: 0; filter: alpha(opacity=0); z-index: -1; }
-.translatecoverimage{ transform: translate(0px,50px); margin-top: -40px; }
-
-.topnav { height: 50px; }
-.topnav img { width: 48px; }
-
-.bottomnav {display: none; height: 36px;}
-.bottomnav img { width: 24px; height: 24px; }
-
-.leftnav  {  left:0; }
-.rightnav {  right:0; }
-.middlenav{  left: 50%; }
-
-.Navbar { position: relative; z-index: 0;}
-.Navbar img{ position: absolute; bottom: 0; cursor: pointer; cursor: hand;}
-
-.animateonhover {transition: transform 0.4s ease-out;}
-.animateonhover:hover { transform: rotateY(360deg); }
-
-/* DESCRIPTION */
-.Description { display: block;}
-
-.Social{ height: 34px; }
-.Social img{ width: 32px; height: 100%; float: right;}
-
-.Resume-button:active { top: 1px; outline: none;  box-shadow: none; }
-.Resume-button { float: left; width: 50%; height: 100%; font-size: 22px; color: white; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: #c0392b;
-  border: 0; border-bottom: 2px solid #b53224; cursor: pointer; box-shadow: inset 0 -2px #b53224; }
-
-/* PROJECTS */
-.Projects { display:none; }
-.Projects .item { margin-top: 15px; }
-.Projects .item img{ width: 100%; }
-.Projects .item .footer { width: 24px; margin: 0 auto; }
-
-/* LINKS */
-.Links{ display: none;}
-.Links .perSocial { margin-top: 20px; width: 100%;}
-.Links .perSocial .icons {height: 64px; margin-bottom: 32px;}
-.Links .perSocial .icons img { width: 40px; height: 40px; }
-.Links .perSocial .icons .midsize { margin-left: -16px; }
-
-.useLinks{ position: relative; width: 100%; }
-.useLinks .linklist {margin-top: 32px; margin-bottom: 32px}
-.useLinks .linklist .item { position: relative;   height: 32px;}
-.useLinks .linklist .item p { float:left; width: 80%; padding-top: 5px; margin: 0px; margin-bottom: 5px; }
-.useLinks .linklist .item img{ float: right; vertical-align: middle; width: 24px; }
 
 /*
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
