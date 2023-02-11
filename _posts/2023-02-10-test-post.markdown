@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Blog Post Test"
+date:   2023-02-10 19:34:05 +0000
+categories: jekyll update
+blob: "This is test post to check if blog posts work properly!"
+---
+
+**[Home](https://omarzohdi.github.io/) >> [Blog](https://omarzohdi.github.io/blog.html)>> {{ page.title }}**
+
+This is test post to check if blog posts work properly!
+
+[back](https://omarzohdi.github.io/blog.html)

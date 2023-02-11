@@ -1,0 +1,49 @@
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
+
+title: Omar Zohdi
+# email: omarzohdi@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Game developer, technology enthusiast and developer relations engineer. 
+  Dedicating my time building communities and working with developers to improve development tools. 
+  Passionate about serious game development.
+  <br/>
+  Currently working on surviving the AI apocalypse!
+logo: ./assets/img/profilepic.jpg
+favicon: true
+color-scheme: dark
+author: Omar Zohdi
+hide_project_page: true
+hide_project_footer: true
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+platforms:
+  - name: About
+    icon: <i class="fa-solid fa-user"></i>
+    link: https://omarzohdi.github.io/
+  - name: Projects
+    icon: <i class="fa-solid fa-code"></i>
+    link: https://omarzohdi.github.io/projects.html
+  - name: Open Source
+    icon: <i class="fa-brands fa-osi"></i>
+    link: https://omarzohdi.github.io/opensource.html
+  - name: Talks & Awards
+    icon: <i class="fa-solid fa-award"></i>
+    link: https://omarzohdi.github.io/talksawards.html
+  - name: Blog
+    icon: <i class="fa-solid fa-blog"></i>
+    link: https://omarzohdi.github.io/blog.html
+  - name: " "
+    icon: " "
+    link: " "
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/omarzohdi
+  - name: LinkedIn
+    icon: <i class="fa-brands fa-linkedin"></i>
+    link: https://www.linkedin.com/in/omarzohdi
